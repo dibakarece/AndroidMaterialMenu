@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#009688</color>
+    <color name="ColorPrimary">#009688</color>
+    <color name="ColorPrimaryDark">#009688</color>
+    <!-- Theme -->
+    <color name="theme_color">#1F497D</color>
+    <color name="gplusbtncolor">#e23737</color>
+    <color name="joblist_bg_color">#d0dae6</color>
+
+</resources>
