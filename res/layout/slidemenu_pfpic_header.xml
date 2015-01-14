@@ -36,12 +36,25 @@
             android:textStyle="normal" />
     </LinearLayout>
 
-    <com.androidmaterialmenu.CircleImageView
-        android:id="@+id/circleView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <RelativeLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="38dp"
-        android:src="@drawable/ic_profilepic" />
+        android:layout_marginTop="38dp" >
+
+        <com.androidmaterialmenu.CircleImageView
+            android:id="@+id/circleView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profilepic"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/shape_circle_bg" />
+    </RelativeLayout>
 
 </RelativeLayout>
