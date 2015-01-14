@@ -29,7 +29,7 @@
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
-            android:background="#4DB6AC"
+            android:background="@android:color/white"
             android:scrollbars="none" >
         </android.support.v7.widget.RecyclerView>
     </android.support.v4.widget.DrawerLayout>
