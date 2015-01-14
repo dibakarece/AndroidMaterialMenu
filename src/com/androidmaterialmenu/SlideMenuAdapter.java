@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 /**
  * Created by hp1 on 28-12-2014.
  */
@@ -26,6 +30,8 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
     
 	private Context context;
 
+	private DisplayImageOptions options;
+	private ImageLoader imageLoader=ImageLoader.getInstance();
 	
 	public SlideMenuAdapter(Context context,String Titles[], int Icons[], String Name,String Email, int Profile) {
 		
@@ -35,6 +41,13 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
 		name = Name;
 		email = Email;
 		profile = Profile;
+		
+		options = new DisplayImageOptions.Builder()
+				.showImageOnLoading(R.drawable.ic_profilepic)
+				.showImageForEmptyUri(R.drawable.ic_profilepic)
+				.showImageOnFail(R.drawable.ic_profilepic).cacheInMemory(true)
+				.cacheOnDisc(true).considerExifParams(true).build();
+		imageLoader.init(ImageLoaderConfiguration.createDefault(context));
 	}
 
 
@@ -108,7 +121,7 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
 			});
 
 		} else {
-			holder.profile.setImageResource(profile);
+			imageLoader.displayImage(Constants.IMAGES[12], holder.profile, options);
 			holder.Name.setText(name);
 			holder.email.setText(email);
 		}

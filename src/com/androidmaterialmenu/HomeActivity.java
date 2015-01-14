@@ -2,6 +2,7 @@ package com.androidmaterialmenu;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -28,8 +29,8 @@ import com.androidmaterialmenu.SlideMenuAdapter.viewCLickEvent;
 public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 
 	
-	private String NAME = "";
-	private String EMAIL = "";
+	private String NAME = "Dibakar Mistry";
+	private String EMAIL = "dibakar.ece@gmail.com";
 	private int PROFILE = R.drawable.ic_profilepic;
 
     private Toolbar toolbar;                            
@@ -132,6 +133,8 @@ public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 
 		case 1:
 			closeDraware();
+			startActivity(new Intent(HomeActivity.this,MyProfileActivity.class));
+			overridePendingTransition(0,0);
 			break;
 		case 2:
 			closeDraware();
