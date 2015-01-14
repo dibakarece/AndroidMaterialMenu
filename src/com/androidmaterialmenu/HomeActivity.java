@@ -21,7 +21,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.androidmaterialmenu.SlideMenuAdapter.viewCLickEvent;
@@ -75,7 +74,7 @@ public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 				@Override
 				public boolean onQueryTextSubmit(String s) {
 					searchView.clearFocus();
-				    ShowToast(mContext, "TextSubmit : " + s);
+				    ShowToast(mContext, "SerachText : " + s);
 					return true;
 				}
 				
