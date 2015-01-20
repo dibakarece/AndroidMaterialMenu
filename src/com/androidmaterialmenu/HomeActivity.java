@@ -22,6 +22,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.androidmaterialmenu.SlideMenuAdapter.viewCLickEvent;
@@ -45,6 +46,7 @@ public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 
     public static String TITLES[] = {"My Profile","My Message","Important Mail","Settings","Logout"};
 	public static int ICONS[] = {R.drawable.ic_profile,R.drawable.ic_mypost,R.drawable.ic_impmail,R.drawable.ic_settings,R.drawable.ic_logout};
+	private ListView listView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,8 @@ public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 		
 		 mContext=HomeActivity.this;
 	     initilizActionBarDrawer();
+	     initializeView();
+	     loadData();
 		
 	}
 
@@ -193,6 +197,18 @@ public class HomeActivity extends ActionBarActivity implements viewCLickEvent{
 			Drawer.closeDrawers();
 		}
     }
+    
+    private void initializeView() {
+		listView=(ListView)findViewById(R.id.list_myitem);
+		
+	}
+    
+    private void loadData() {
+    	listView.setAdapter(new HomeListBaseAdapter(mContext, Constants.IMAGES));
+	}
+    
+    
+    
     
 	/**
 	 * Show Alert Toast message.

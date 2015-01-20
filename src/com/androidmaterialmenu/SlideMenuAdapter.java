@@ -1,6 +1,7 @@
 package com.androidmaterialmenu;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,8 +56,8 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
 		int Holderid;
 
 		TextView textView;
-		ImageView imageView;
-		ImageView profile;
+		ImageView imageView,shape;
+		CircleImageView profile;
 		TextView Name;
 		TextView email;
 
@@ -70,7 +71,8 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
 			} else {
 				Name = (TextView) itemView.findViewById(R.id.name);
 				email = (TextView) itemView.findViewById(R.id.email);
-				profile = (ImageView) itemView.findViewById(R.id.circleView);
+				profile = (CircleImageView) itemView.findViewById(R.id.circleView);
+				shape =  (ImageView) itemView.findViewById(R.id.shape);
 				Holderid = 0;
 			}
 		}
@@ -122,6 +124,12 @@ public class SlideMenuAdapter extends RecyclerView.Adapter<SlideMenuAdapter.View
 
 		} else {
 			imageLoader.displayImage(Constants.IMAGES[12], holder.profile, options);
+			try {
+				GradientDrawable gradientDrawable = (GradientDrawable) holder.shape.getBackground();
+				gradientDrawable.setStroke(5, context.getResources().getColor(android.R.color.white));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			holder.Name.setText(name);
 			holder.email.setText(email);
 		}
