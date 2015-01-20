@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/hidepost"
+        android:title="Hide this Post"/>
+    <item
+        android:id="@+id/spampost"
+        android:title="Mark as Spam"/>
+
+</menu>

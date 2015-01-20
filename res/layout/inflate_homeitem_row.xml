@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/inf_homerow_rel_prfpic"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="8dp" >
+
+            <com.androidmaterialmenu.CircleImageView
+                android:id="@+id/circleView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profilepic"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/circle_shape"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/shape_circle_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inf_homerow_rel_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/ic_moreoptione"
+            android:layout_toRightOf="@+id/inf_homerow_rel_prfpic" >
+
+            <TextView
+                android:id="@+id/inf_homerow_txt_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Dibakar Mistry"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/primary_dark" />
+
+            <TextView
+                android:id="@+id/inf_homerow_txt_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inf_homerow_txt_name"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text="post date 20-01-2015"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_dark" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ic_moreoptione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_more" />
+    </RelativeLayout>
+
+</LinearLayout>
