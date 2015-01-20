@@ -52,9 +52,10 @@
             android:visibility="visible" />
 
         <ImageView
+            android:id="@+id/shape"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/shape_circle_bg" />
+            android:background="@drawable/shape_circle_bg" />
     </RelativeLayout>
 
 </RelativeLayout>
